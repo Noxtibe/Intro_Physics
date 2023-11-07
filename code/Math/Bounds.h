@@ -12,8 +12,10 @@
 Bounds
 ====================================================
 */
-class Bounds {
+class Bounds 
+{
 public:
+
 	Bounds() { Clear(); }
 	Bounds( const Bounds & rhs ) : mins( rhs.mins ), maxs( rhs.maxs ) {}
 	const Bounds & operator = ( const Bounds & rhs );
@@ -30,6 +32,7 @@ public:
 	float WidthZ() const { return maxs.z - mins.z; }
 
 public:
+
 	Vec3 mins;
 	Vec3 maxs;
 };

@@ -3,7 +3,6 @@
 //
 #pragma once
 #include <vector>
-
 #include "../Body.h"
 
 /*
@@ -11,8 +10,10 @@
 Scene
 ====================================================
 */
-class Scene {
+class Scene 
+{
 public:
+
 	Scene() { bodies.reserve( 128 ); }
 	~Scene();
 
