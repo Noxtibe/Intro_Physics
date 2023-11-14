@@ -1,6 +1,3 @@
-//
-//  application.h
-//
 #pragma once
 #define GLFW_INCLUDE_VULKAN
 #include <GLFW/glfw3.h>
@@ -24,36 +21,40 @@
 Application
 ====================================================
 */
-class Application {
+class Application 
+{
 public:
-	Application() : m_isPaused( true ), m_stepFrame( false ) {}
+
+	Application() : m_isPaused(true), m_stepFrame(false) {}
 	~Application();
 
 	void Initialize();
 	void MainLoop();
 
 private:
-	std::vector< const char * > GetGLFWRequiredExtensions() const;
+
+	std::vector< const char* > GetGLFWRequiredExtensions() const;
 
 	void InitializeGLFW();
 	bool InitializeVulkan();
 	void Cleanup();
 	void UpdateUniforms();
 	void DrawFrame();
-	void ResizeWindow( int windowWidth, int windowHeight );
-	void MouseMoved( float x, float y );
-	void MouseScrolled( float z );
-	void Keyboard( int key, int scancode, int action, int modifiers );
+	void ResizeWindow(int windowWidth, int windowHeight);
+	void MouseMoved(float x, float y);
+	void MouseScrolled(float z);
+	void Keyboard(int key, int scancode, int action, int modifiers);
 
-	static void OnWindowResized( GLFWwindow * window, int width, int height );
-	static void OnMouseMoved( GLFWwindow * window, double x, double y );
-	static void OnMouseWheelScrolled( GLFWwindow * window, double x, double y );
-	static void OnKeyboard( GLFWwindow * window, int key, int scancode, int action, int modifiers );
+	static void OnWindowResized(GLFWwindow* window, int width, int height);
+	static void OnMouseMoved(GLFWwindow* window, double x, double y);
+	static void OnMouseWheelScrolled(GLFWwindow* window, double x, double y);
+	static void OnKeyboard(GLFWwindow* window, int key, int scancode, int action, int modifiers);
 
 private:
-	class Scene * scene;
 
-	GLFWwindow * glfwWindow;
+	class Scene* scene;
+
+	GLFWwindow* glfwWindow;
 
 	DeviceContext deviceContext;
 
@@ -66,7 +67,7 @@ private:
 	//	Model
 	//
 	Model m_modelFullScreen;
-	std::vector< Model * > m_models;	// models for the bodies
+	std::vector< Model* > m_models;	// models for the bodies
 
 	//
 	//	Pipeline for copying the offscreen framebuffer to the swapchain
@@ -83,7 +84,7 @@ private:
 	float m_cameraRadius;
 	bool m_isPaused;
 	bool m_stepFrame;
-
+	Vec3 camRotation{ 0,0,0 };
 	std::vector< RenderModel > m_renderModels;
 
 	static const int WINDOW_WIDTH = 1200;
@@ -92,4 +93,4 @@ private:
 	static const bool m_enableLayers = true;
 };
 
-extern Application * application;
+extern Application* application;

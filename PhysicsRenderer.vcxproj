@@ -40,7 +40,7 @@
     <ClCompile Include="code\Renderer\SwapChain.cpp" />
     <ClCompile Include="code\Scene.cpp" />
     <ClCompile Include="Contact.cpp" />
-    <ClCompile Include="Intersections.cpp" />
+    <ClCompile Include="Intersection.cpp" />
     <ClCompile Include="Shape.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -67,7 +67,7 @@
     <ClInclude Include="code\Renderer\SwapChain.h" />
     <ClInclude Include="code\Scene.h" />
     <ClInclude Include="Contact.h" />
-    <ClInclude Include="Intersections.h" />
+    <ClInclude Include="Intersection.h" />
     <ClInclude Include="Shape.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

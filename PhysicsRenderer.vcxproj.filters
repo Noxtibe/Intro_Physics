@@ -72,7 +72,7 @@
     <ClCompile Include="Body.cpp">
       <Filter>code\Physics</Filter>
     </ClCompile>
-    <ClCompile Include="Intersections.cpp">
+    <ClCompile Include="Intersection.cpp">
       <Filter>code\Physics</Filter>
     </ClCompile>
     <ClCompile Include="Contact.cpp">
@@ -152,7 +152,7 @@
     <ClInclude Include="Shape.h">
       <Filter>code\Physics</Filter>
     </ClInclude>
-    <ClInclude Include="Intersections.h">
+    <ClInclude Include="Intersection.h">
       <Filter>code\Physics</Filter>
     </ClInclude>
     <ClInclude Include="Contact.h">
