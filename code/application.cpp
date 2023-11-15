@@ -444,14 +444,14 @@ void Application::Keyboard(int key, int scancode, int action, int modifiers)
 		scene->ThrowBallPetanque(Vec3(0, 0, 5), camRotation);
 	}
 
-	if (GLFW_KEY_D == key && GLFW_RELEASE == action)
+	if (GLFW_KEY_I == key && GLFW_RELEASE == action)
 	{
-		scene->SetPower(+.25f);
+		scene->SetPower(+0.50f);
 	}
 
-	if (GLFW_KEY_A == key && GLFW_RELEASE == action)
+	if (GLFW_KEY_K == key && GLFW_RELEASE == action)
 	{
-		scene->SetPower(-.25f);
+		scene->SetPower(-0.50f);
 	}
 }
 

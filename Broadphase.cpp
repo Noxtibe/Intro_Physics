@@ -71,8 +71,7 @@ void BuildPairs(std::vector< CollisionPair >& collisionPairs,
 
 void SweepAndPrune1D(const Body* bodies, const size_t num, std::vector< CollisionPair >& finalPairs, const float dt_sec)
 {
-	PseudoBody* sortedBodies =
-		(PseudoBody*)alloca(sizeof(PseudoBody) * num * 2);
+	PseudoBody* sortedBodies = (PseudoBody*)alloca(sizeof(PseudoBody) * num * 2);
 	SortBodiesBounds(bodies, num, sortedBodies, dt_sec);
 	BuildPairs(finalPairs, sortedBodies, num);
 }
