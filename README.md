@@ -13,3 +13,5 @@ I to increase the power of the shot (by 0.5)
 K to decrease the power of the shot (by -0.5)
 
 Be careful the power is not reinitialized at each new ball
+
+The game simply loop with the launch of the cochonnet, then the 6 balls, again and again...
