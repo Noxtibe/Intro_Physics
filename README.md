@@ -1,5 +1,9 @@
 # Intro_Physics
+
+ C++ projects
  
+I've created a petanque game, working specifically on the physics of the game.
+
 R to reset the simulation
 
 T to unpaused the simulation at the start
